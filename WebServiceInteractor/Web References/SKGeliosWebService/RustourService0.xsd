@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://icra-uat.skgelios.ru/Services/RustourService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/iCra.Core.Domain" />
+  <xs:element name="LoadPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serviceKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/iCra.Core.Domain" minOccurs="0" name="policy" nillable="true" type="q1:WS_NS_Policy" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadPolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/iCra.Core.Domain" minOccurs="0" name="LoadPolicyResult" nillable="true" type="q2:WS_NS_Policy_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serviceKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/iCra.Core.Domain" minOccurs="0" name="policy" nillable="true" type="q3:WS_NS_PolicyTo_Del" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/iCra.Core.Domain" minOccurs="0" name="DeletePolicyResult" nillable="true" type="q4:WS_NS_Policy_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
